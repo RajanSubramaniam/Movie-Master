@@ -1,0 +1,24 @@
+@font-face {
+    font-family:"headerfont";
+    src:url("fonts/Amaranth-Regular.otf");
+}
+
+body{
+    background-color: #F4F5F8;
+}
+
+
+h3 {
+    font-family: "headerfont";
+    text-align: center;
+    color:#E0E7F3;
+}
+
+a.nolink {
+    text-decoration: none;
+}
+
+nav.navbar {
+    background-color:#CD111F;
+}
+

@@ -1,0 +1,41 @@
+@font-face {
+    font-family:"headerfont";
+    src:url("fonts/Amaranth-BoldItalic.otf");
+}
+
+@font-face {
+    font-family:"sideheaderfont";
+    src:url("fonts/SF_Arch_Rival_Extended.ttf");
+}
+
+body{
+    background-color: #F4F5F8;
+}
+
+.jumbotron{
+    background-color:#CD111F;
+}
+
+.jumbotron h1{
+    font-family:"headerfont", sans-serif;  /* font family for the logo heading */  
+    color:#E0E7F3;
+}
+
+#group_image {
+    margin-left:40px;
+}
+
+ .signs{
+    color:#E0E7F3;
+}
+
+h2{
+    font-family: "sideheaderfont", sans-serif;
+    color:#CD111F;
+}
+
+.well-sm {
+    background-color: #D5D3D3;
+    border-radius: 25px;
+}
+
