@@ -40,90 +40,16 @@
             <br>
             <br>
         <div class="container">
-            <div id="group_image">
-                <div class="row">
-                    <div class=" col-lg-3 col-md-3 col-sm-6 col-xm-12">
-                        <a href="#" class="img-thumbnail">
-                            <img src="{% static 'images/p1.jpg' %}" alt="movie_name" style="width:170px;height:190px">
-                        </a>
-                    </div>
-            
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xm-12">
-                        <a href="#" class="img-thumbnail">
-                            <img src="{% static 'images/p1.jpg' %}" alt="movie_name" style="width:170px;height:190px">
-                        </a>
-                    </div>
-            
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xm-12">
-                        <a href="#" class="img-thumbnail">
-                            <img src="{% static 'images/p1.jpg' %}" alt="movie_name" style="width:170px;height:190px">
-                        </a>
-                    </div>
-            
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xm-12">
-                        <a href="#" class="img-thumbnail">
-                            <img src="{% static 'images/p1.jpg' %}" alt="movie_name" style="width:170px;height:190px">
-                        </a>
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xm-12">
-                        <a href="#" class="img-thumbnail">
-                            <img src="{% static 'images/p1.jpg' %}" alt="movie_name" style="width:170px;height:190px">
-                        </a>
-                    </div>
-                
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xm-12">
-                        <a href="#" class="img-thumbnail">
-                            <img src="{% static 'images/p1.jpg' %}" alt="movie_name" style="width:170px;height:190px">
-                        </a>
-                    </div>
-                
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xm-12">
-                        <a href="#" class="img-thumbnail">
-                            <img src="{% static 'images/p1.jpg' %}" alt="movie_name" style="width:170px;height:190px">
-                        </a>
-                    </div>
-                
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xm-12">
-                        <a href="#" class="img-thumbnail">
-                            <img src="{% static 'images/p1.jpg' %}" alt="movie_name" style="width:170px;height:190px">
-                        </a>
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xm-12">
-                        <a href="#" class="img-thumbnail">
-                            <img src="{% static 'images/p1.jpg' %}" alt="movie_name" style="width:170px;height:190px">
-                        </a>
-                    </div>
-                
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xm-12">
-                        <a href="#" class="img-thumbnail">
-                            <img src="{% static 'images/p1.jpg' %}" alt="movie_name" style="width:170px;height:190px">
-                        </a>
-                    </div>
-                
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xm-12">
-                        <a href="#" class="img-thumbnail">
-                            <img src="{% static 'images/p1.jpg' %}" alt="movie_name" style="width:170px;height:190px">
-                        </a>
-                    </div>
-                
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xm-12">
-                        <a href="#" class="img-thumbnail">
-                            <img src="{% static 'images/p1.jpg' %}" alt="movie_name" style="width:170px;height:190px">
-                        </a>
-                    </div>
-                </div>
-                <br>
-                <br>
-            </div>
+            {% for movie in movies %}
+            <h3>{{movie.title}}</h3>   
+            {% endfor %}      
         </div>   
     </body>
 </html>
+
+
+
+
 
 
 

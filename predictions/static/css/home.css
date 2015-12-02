@@ -1,11 +1,11 @@
 @font-face {
     font-family:"headerfont";
-    src:url("fonts/Amaranth-BoldItalic.otf");
+    src:url("Amaranth-BoldItalic.otf");
 }
 
 @font-face {
     font-family:"sideheaderfont";
-    src:url("fonts/SF_Arch_Rival_Extended.ttf");
+    src:url("SF_Arch_Rival_Extended.ttf");
 }
 
 body{
@@ -29,7 +29,7 @@ body{
     color:#E0E7F3;
 }
 
-h2{
+h3, h2{
     font-family: "sideheaderfont", sans-serif;
     color:#CD111F;
 }
@@ -38,4 +38,10 @@ h2{
     background-color: #D5D3D3;
     border-radius: 25px;
 }
+
+
+
+
+
+
 

@@ -1,6 +1,6 @@
 @font-face {
     font-family:"headerfont";
-    src:url("fonts/Amaranth-Regular.otf");
+    src:url("Amaranth-Regular.otf");
 }
 
 body{
@@ -21,4 +21,6 @@ a.nolink {
 nav.navbar {
     background-color:#CD111F;
 }
+
+
 
