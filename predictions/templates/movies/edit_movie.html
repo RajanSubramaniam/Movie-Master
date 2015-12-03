@@ -1,0 +1,12 @@
+{% extends 'layouts/base.html' %}
+{% block title %} 
+	Edit {{movie.title}} - {{block.super}}
+{% endblock %}
+{% block content %}
+<h2> Rate the Movie "{{movie.title}}" </h2>
+<form role="form" action="" method="post">
+	{% csrf_token %}
+	{{form.as_p}}
+	<button type="submit">Submit</button>
+</form>
+{% endblock %}

@@ -22,9 +22,11 @@ urlpatterns = [
     url(r'^$', 'predictions.views.home',name='home'),
     url(r'^user/$', 'predictions.views.user',name='user'),
 	url(r'^movies/(?P<slug>[-\w]+)/$', 'predictions.views.movie_detail',name='movie_detail'),
+	url(r'^movies/(?P<slug>[-\w]+)/edit/$', 'predictions.views.edit_movie',name='edit_movie'),
 	url(r'^accounts/', include('registration.backends.simple.urls')),
     url(r'^admin/', include(admin.site.urls)),
 ]
+
 
 
 

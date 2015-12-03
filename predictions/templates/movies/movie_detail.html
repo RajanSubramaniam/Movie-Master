@@ -32,6 +32,8 @@
             <br><br>
             <h4>User-Rating:</h4>
             <h4><span class="glyphicon glyphicon-bookmark"></span>  {{movie.user_ratings}}</h4>
+            <br>
+            <a href="{% url 'edit_movie' slug=movie.slug %}"> <h2> Rate me! </h2> </a>
         </div>
     </body>  
 </html>

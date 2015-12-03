@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from predictions.forms import MovieForm
 from predictions.models import Movie
 
 # Create your views here.
@@ -17,6 +18,21 @@ def movie_detail(request, slug):
 		'movie':movie,
 	})
 
+def edit_movie(request, slug):
+	movie=Movie.objects.get(slug=slug)
+	form_class = MovieForm
+	if request.method == 'POST':
+		form = form_class(data=request.POST, instance=movie)
+		if form.is_valid():
+			form.save()
+			return redirect('movie_detail', slug=movie.slug)
+	else:
+		form = form_class(instance=movie)
+
+	return render(request,'movies/edit_movie.html',{
+			'movie':movie,
+			'form': form,
+	})
 
 def user(request):
 	movies = Movie.objects.filter(user_ratings=5)
@@ -24,6 +40,8 @@ def user(request):
 	return render(request, 'user.html',{
 			'movies':movies,
 	})
+
+
 
 
 
