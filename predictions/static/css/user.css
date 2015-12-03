@@ -1,0 +1,61 @@
+@font-face {
+    font-family:"headerfont";
+    src:url("Amaranth-Regular.otf");
+}
+
+@font-face {
+    font-family:"sideheaderfont";
+    src:url("SF_Arch_Rival_Extended.ttf");
+}
+
+.navbar{
+background-color: #CD111F;
+}
+
+.navbar-default .navbar-brand{
+    color: #F4F5F8;
+    font-family: "headerfont";
+}
+
+
+.navbar-default .navbar-nav > .dropdown > a.dropdown-toggle {
+    color: #F4F5F8;
+}
+
+
+.navbar-default .navbar-nav > .dropdown > a:focus {
+    color:red;
+}
+    
+
+.navbar-default .navbar-right li a {
+    color: #F4F5F8;
+}
+
+.navbar-default .navbar-right li a:hover {
+    color: #F4F5F8;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+    color:#5B5353;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover {
+    background-color: white;
+}
+
+
+body{
+    background-color: #F4F5F8;
+}
+
+
+h2{
+    font-family: "sideheaderfont", sans-serif;
+    color: #CD111F;
+}
+
+.well-sm {
+    background-color: #D5D3D3;
+    border-radius: 25px;
+}

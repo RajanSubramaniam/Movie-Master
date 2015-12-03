@@ -18,6 +18,17 @@ def movie_detail(request, slug):
 	})
 
 
+def user(request):
+	movies = Movie.objects.filter(user_ratings=5)
+
+	return render(request, 'user.html',{
+			'movies':movies,
+	})
+
+
+
+
+
 
 
 
