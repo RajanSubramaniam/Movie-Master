@@ -41,11 +41,16 @@
             <br>
         <div class="container">
             {% for movie in movies %}
-            <h3>{{movie.title}}</h3>   
+                <h3><a href="{% url 'movie_detail' slug=movie.slug %}">
+                    {{movie.title}} 
+                </a></h3> 
             {% endfor %}      
         </div>   
     </body>
 </html>
+
+
+
 
 
 

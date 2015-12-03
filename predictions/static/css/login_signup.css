@@ -3,6 +3,11 @@
     src:url("Amaranth-Regular.otf");
 }
 
+@font-face {
+    font-family:"sideheaderfont";
+    src:url("SF_Arch_Rival_Extended.ttf");
+}
+
 body{
     background-color: #F4F5F8;
 }
@@ -21,6 +26,18 @@ a.nolink {
 nav.navbar {
     background-color:#CD111F;
 }
+
+h2 {
+    font-family: "sideheaderfont", sans-serif;
+    color:#CD111F;
+}
+
+.well-sm {
+    background-color: #D5D3D3;
+    border-radius: 25px;
+}
+
+
 
 
 

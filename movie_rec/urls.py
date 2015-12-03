@@ -22,6 +22,8 @@ urlpatterns = [
     url(r'^$', 'predictions.views.home',name='home'),
     url(r'^register/$', TemplateView.as_view(template_name='register.html'),name='register'),
 	url(r'^login/$', TemplateView.as_view(template_name='login.html'),name='login'),
+	url(r'^movies/(?P<slug>[-\w]+)/$', 'predictions.views.movie_detail',name='movie_detail'),
+	
     url(r'^admin/', include(admin.site.urls)),
 ]
 

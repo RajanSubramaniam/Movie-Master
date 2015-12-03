@@ -10,6 +10,16 @@ def home(request):
 	})
 
 
+def movie_detail(request, slug):
+	movie=Movie.objects.get(slug=slug)
+	
+	return render(request, 'movies/movie_detail.html',{
+		'movie':movie,
+	})
+
+
+
+
 
 
 
