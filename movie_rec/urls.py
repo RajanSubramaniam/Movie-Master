@@ -16,16 +16,36 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 from django.views.generic import TemplateView    #later we have to change it 
-
+from django.contrib.auth.views import (
+    password_reset,
+    password_reset_done,
+    password_reset_confirm,
+    password_reset_complete,
+)
 
 urlpatterns = [
     url(r'^$', 'predictions.views.home',name='home'),
     url(r'^user/$', 'predictions.views.user',name='user'),
 	url(r'^movies/(?P<slug>[-\w]+)/$', 'predictions.views.movie_detail',name='movie_detail'),
 	url(r'^movies/(?P<slug>[-\w]+)/edit/$', 'predictions.views.edit_movie',name='edit_movie'),
+    url(r'^accounts/password/reset/$',password_reset,
+        {'template_name':'registration/password_reset_form.html'},name="password_reset"),
+
+    url(r'^accounts/password/reset/done/$',password_reset_done,
+        {'template_name':'registration/password_reset_done.html'},name="password_reset_done"),
+
+    url(r'^accounts/password/reset/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$',password_reset_confirm,
+        {'template_name':'registration/password_reset_confirm.html'},name="password_reset_confirm"),
+
+    url(r'^accounts/password/done/$', password_reset_complete,
+        {'template_name':'registration/password_reset_complete.html'},
+        name="password_reset_complete"),
+
 	url(r'^accounts/', include('registration.backends.simple.urls')),
     url(r'^admin/', include(admin.site.urls)),
 ]
+
+
 
 
 
