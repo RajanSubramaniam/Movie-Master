@@ -1,0 +1,26 @@
+
+.jumbotron {
+    background-color: #8E8E8E;
+    margin-top:-21px;
+}
+
+#textcol {
+    color: #CD111F;
+}
+
+.input-group {
+    margin-top:28px;
+}
+
+h1{
+    margin-left: 20px;
+}
+
+.glyphicon-search {
+    color: #CD111F ;
+}
+
+select option[disabled]:first-child {
+    display: none;
+}
+

@@ -42,6 +42,21 @@ def user(request):
 	})
 
 
+def browse_by_name(request, initial=None):
+	if initial:
+		movies = Movie.objects.filter(
+			title__istartswith=initial).order_by('title')
+	else:
+		movies = Movie.objects.all().order_by('title')
+	return render(request,'search/search.html',{
+		'movies':movies,
+		'initial': initial,
+	})
+
+
+
+
+
 
 
 
