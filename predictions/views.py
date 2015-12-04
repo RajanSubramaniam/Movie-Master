@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from predictions.forms import MovieForm
 from predictions.models import Movie
+from django.template.defaultfilters import slugify
 
 # Create your views here.
 def home(request):
@@ -40,6 +41,25 @@ def user(request):
 	return render(request, 'user.html',{
 			'movies':movies,
 	})
+
+def create_movie(request):
+	form_class = MovieForm
+	if request.method == 'POST':
+		form=form_class(request.POST)
+		if form.is_valid():
+			movie=form.save(commit=False)
+			movie.user=request.user
+			movie.slug=slugify(movie.title)
+			movie.save()
+			return redirect('movie_detail',slug=movie.slug)
+	else:
+		form=form_class()
+
+	return render(request, 'movies/add_movie.html', {
+			'form': form,
+	})
+
+
 
 
 def browse_by_name(request, initial=None):

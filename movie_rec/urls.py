@@ -22,6 +22,8 @@ from django.contrib.auth.views import (
     password_reset_confirm,
     password_reset_complete,
 )
+from predictions.backends import MyRegistrationView
+
 
 urlpatterns = [
     url(r'^$', 'predictions.views.home',name='home'),
@@ -46,10 +48,14 @@ urlpatterns = [
         {'template_name':'registration/password_reset_complete.html'},
         name="password_reset_complete"),
 
+    url(r'^accounts/register/$', MyRegistrationView.as_view(),
+        name='registration_register'),
+    url(r'^accounts/create_movie/$', 'predictions.views.create_movie',name='registration_create_movie'),
 	url(r'^accounts/', include('registration.backends.simple.urls')),
     url(r'^admin/', include(admin.site.urls)),
 
 ]
+
 
 
 
