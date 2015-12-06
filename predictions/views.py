@@ -17,7 +17,9 @@ def movie_detail(request, slug):
 	
 	return render(request, 'movies/movie_detail.html',{
 		'movie':movie,
+		
 	})
+
 
 def edit_movie(request, slug):
 	movie=Movie.objects.get(slug=slug)
@@ -41,6 +43,9 @@ def user(request):
 	return render(request, 'user.html',{
 			'movies':movies,
 	})
+
+
+
 
 def create_movie(request):
 	form_class = MovieForm
@@ -72,6 +77,10 @@ def browse_by_name(request, initial=None):
 		'movies':movies,
 		'initial': initial,
 	})
+
+
+
+
 
 
 
