@@ -1,7 +1,8 @@
+from django.contrib.auth.models import User
 from django.db import models
 from django.core.validators import MinValueValidator
 from django.core.validators import MaxValueValidator
-from django.contrib.auth.models import User
+
 
 # Create your models here.
 class Movie(models.Model):
@@ -11,3 +12,5 @@ class Movie(models.Model):
 	user_ratings = models.PositiveIntegerField(validators=[MinValueValidator(1),MaxValueValidator(5)])
 	slug = models.SlugField(unique=True)
 	user = models.OneToOneField(User, blank=True, null=True)
+
+
