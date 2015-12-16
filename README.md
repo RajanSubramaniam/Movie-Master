@@ -27,4 +27,7 @@
   </ol>
   
 # FrontEnd Design
-  Technologies Used - HTML5, CSS3, JQuery, Javascript, Bootstrap, Balsamiq Mockup3
+  Technologies Used - HTML5, CSS3, Javascript, Bootstrap, Balsamiq Mockup3
+
+# Backend and Middleware
+  Technologies Used - Django==1.8.4, Sqlite 3.
